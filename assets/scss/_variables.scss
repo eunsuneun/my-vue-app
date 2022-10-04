@@ -1,0 +1,55 @@
+// Media Query Size
+$pc-width: 1280px;
+$pc-height: 800px;
+$mobile-width: 600px;
+
+// Media Query PC 너비 1280px 이상
+@mixin pcWidth {
+  @media (min-width: #{$pc-width}) {
+    @content;
+  }
+}
+// Media Query PC 높이 800px 이상
+@mixin pcHeight {
+  @media (min-height: #{$pc-height}) {
+    @content;
+  }
+}
+// Media Query PC 너비 600px 이하
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+// Color
+$colors: (
+  primary: #3AB54A,
+  primary200: #B4E4BA,
+  primary300: #71DF7F,
+  primary400: #3ED252,
+  secondary: #FF8E28,
+  secondary100: #FFE4CC,
+  tertiary: #3C00BB,
+  grayscale50: #F2F4F6,
+  grayscale100: #F0F1F5,
+  grayscale200: #E5E5E5,
+  grayscale300: #D7D7D7,
+  grayscale400: #B2B8C0,
+  grayscale500: #7D8893,
+  grayscale600: #70747B,
+  grayscale700: #5F656F,
+  grayscale800: #43454D,
+  grayscale900: #010101,
+);
+@function color($color_name) {
+  @return map-get($colors, $color_name);
+}
+
+// font
+@mixin font( $size , $weight:400 , $line-h:$size * 1.5 ) {
+  font-size: $size;
+  line-height: $line-h;
+  letter-spacing: - ($size * .03);
+  font-weight : $weight;
+}

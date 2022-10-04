@@ -1,0 +1,26 @@
+@import "_reset";
+@import "_variables";
+
+// 공통 
+.sr-only{
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+.wrap{
+  @include font(1.6rem, 400);
+}
+.inner{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.content-wrap{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

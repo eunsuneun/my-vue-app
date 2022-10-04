@@ -1,0 +1,2 @@
+const commonFn = () => {};
+export { commonFn };
