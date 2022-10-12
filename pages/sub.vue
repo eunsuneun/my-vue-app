@@ -1,9 +1,9 @@
 <template>
-  <div class="index">
-    <Header page-title="main" :prev-boolean="false"></Header>
+  <div class="sub">
+    <Header page-title="sub"></Header>
     <div class="content-wrap inner">
       <p>
-        <NuxtLink to="/sub" class="go-sub">go sub</NuxtLink>
+        <strong>sub sub sub</strong>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, quia aperiam nihil ex aut reiciendis error blanditiis nam explicabo a, animi suscipit ullam pariatur, illum temporibus labore fugiat ipsam eligendi!
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit voluptatem rem dicta eius ducimus repellat corrupti itaque animi iste, consequuntur illo corporis doloribus nam. Facere, quaerat. Iure beatae asperiores ab.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quis, consequuntur cumque non, officia blanditiis possimus reprehenderit aliquid libero amet neque distinctio minus cum ipsa. Perspiciatis veniam quidem esse optio.
@@ -24,9 +24,5 @@ export default {
 }
 </script>
 <style lang="scss">
-  .go-sub{
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #eee;
-  }
+  
 </style>

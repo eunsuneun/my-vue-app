@@ -1,8 +1,8 @@
 <template>
   <header class="header">
       <div class="inner">
-          <button class="prev-btn" @click="goToPrev()"></button>
-          <h1 class="header__title">{{ gnbTxt }}</h1>   
+          <button class="prev-btn" @click="goToPrev()" v-if="prevBtn"></button>
+          <h1 class="header__title">{{ pageTitle }}</h1>   
       </div>
   </header>
 </template>
@@ -11,7 +11,17 @@
 export default {
   name : 'Header',
   props : {
-      gnbTxt : String
+      pageTitle : String,
+      prevBoolean: {
+        default: true,
+        type: Boolean
+      }
+  },
+  data() {
+    return {
+      prevBtn : this.prevBoolean,
+      test : false
+    }
   },
   methods: {
       goToPrev() {
@@ -24,6 +34,10 @@ export default {
 <style lang="scss">
 @import '~/assets/scss/common';
 .header { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background: #fff; 
   border-bottom: 1px solid #e5e8ec;
   .inner {
@@ -42,6 +56,9 @@ export default {
     width: 100%;
     @include font(1.8rem, 600);
     text-align: center;
+  }
+  & + .content-wrap{
+    margin-top: 47px;
   }
 }
 </style>
